@@ -1,0 +1,66 @@
+/* Define la animación para los elementos dentro de .encabezado */
+@keyframes desplegarEncabezado {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica la animación a los elementos dentro de .encabezado */
+.encabezado {
+  margin-top: 20px;
+  margin-left: 10px;
+
+  h1 {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+  }
+
+}
+
+/* Aplica la animación a los elementos <ion-label> */
+ion-label {
+  animation: desplegarEncabezado 0.5s ease-out; /* Agrega la animación */
+}
+
+ion-card {
+  width: 100%;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+ion-card:hover {
+  transform: translateY(-10px);
+}
+
+ion-content {
+  overflow-y: hidden;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.card-header {
+  background-color: #f0f0f0;
+}
+
+.card-content {
+  font-size: 0.8rem;
+  color: #444;
+}

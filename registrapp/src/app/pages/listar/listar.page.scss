@@ -1,0 +1,12 @@
+/* Añade estos estilos adicionales para la animación */
+ion-item {
+    transition: background-color 0.3s ease; /* Transición para el cambio de color de fondo */
+  }
+  
+  ion-item:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Escala el elemento al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el elemento */
+  }
+  
+  

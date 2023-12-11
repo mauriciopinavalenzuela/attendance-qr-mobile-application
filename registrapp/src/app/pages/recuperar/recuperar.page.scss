@@ -1,0 +1,74 @@
+/* Define la animación para los elementos dentro de .encabezado */
+@keyframes desplegarEncabezado {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Aplica la animación a los elementos dentro de .encabezado */
+  .encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  
+    h1 {
+      font-size: 1.2rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bolder;
+    }
+  
+    /* Aplica la animación a los elementos <ion-label> */
+    ion-label {
+      animation: desplegarEncabezado 0.5s ease-out; /* Agrega la animación */
+    }
+  }
+  
+  ion-card {
+    width: 80%; /* Modifica el ancho según tus necesidades */
+    margin: auto; /* Centra la tarjeta en el medio */
+    margin-bottom: 10px;
+    border-radius: 15px; /* Controla el redondeo de los bordes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar la tarjeta */
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Transición para animar el cambio de estilos */
+    min-height: 400px; /* Ajusta la altura mínima según tus necesidades */
+  }
+  
+  /* Estilo del botón dentro de la tarjeta */
+  ion-button.boton-recuperar {
+    width: 100%; /* Hace que el botón ocupe todo el ancho de la tarjeta */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 11px;
+    padding: 5px 9px;
+  }
+  
+  ion-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  ion-content {
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  ion-item .ion-label {
+    font-size: 14px; 
+  }
+  
+  .error-message {
+    font-size: 13px; 
+    margin-top: 8px; 
+  }

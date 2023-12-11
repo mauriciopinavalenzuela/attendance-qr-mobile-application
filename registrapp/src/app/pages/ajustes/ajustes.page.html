@@ -1,0 +1,33 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Ajustes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="encabezado">
+    <h1>Ajustes</h1>
+  </div>
+  
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="end" name="chevron-forward-outline" color="success"></ion-icon>
+      <ion-label>Cuenta</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="end" name="chevron-forward-outline" color="success"></ion-icon>
+      <ion-label>Modificar Contraseña</ion-label>
+    </ion-item>
+
+    <ion-item (click)="cerrarSesion()">
+      <ion-icon slot="end" name="chevron-forward-outline" color="success"></ion-icon>
+      <ion-label>Cerrar sesión</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

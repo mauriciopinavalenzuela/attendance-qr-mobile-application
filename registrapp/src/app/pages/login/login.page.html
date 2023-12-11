@@ -1,0 +1,66 @@
+<ion-content class="ion-padding">
+  <div class="ion-content-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Iniciar sesión</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="avatar-container">
+          <ion-avatar class="grande">
+            <img class="ion-padding imagen" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+        </div>
+        <form [formGroup]="loginForm" (keydown.enter)="ingresar($event)">
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="text" formControlName="username"></ion-input>
+          </ion-item>
+
+          <div *ngIf="loginForm.get('username')?.invalid && (loginForm.get('username')?.dirty || loginForm.get('username')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="loginForm.get('username')?.hasError('required')">
+              El usuario es obligatorio
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="loginForm.get('username')?.hasError('minlength')">
+              El usuario debe tener mínimo de 5 caracteres
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="loginForm.get('username')?.hasError('maxlength')">
+              El usuario debe tener máximo 10 caracteres
+            </ion-label>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+          <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="loginForm.get('password')?.hasError('required')">
+              La contraseña es obligatoria
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="loginForm.get('password')?.hasError('minlength')">
+              La contraseña debe tener mínimo 6 caracteres
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="loginForm.get('password')?.hasError('maxlength')">
+              La contraseña debe tener máximo 15 caracteres
+            </ion-label>
+          </div>
+        </form>
+
+        <br>
+        <ion-button type="button" fill="solid" color="success" shape="round" class="boton-ingresar" [disabled]="!loginForm.valid" (click)="ingresar($event)">
+          Ingresar
+        </ion-button>
+        <ion-label routerLink="/registro" color="success" class="enlace-crearcuenta">
+          Crear Cuenta
+        </ion-label>
+        <ion-label routerLink="/listar" color="success" class="restablecer-contrasena">
+          Restablecer Contraseña
+        </ion-label>
+        <ion-label routerLink="/recuperar" color="success" class="recuperar-contrasena">
+          Recuperar Contraseña
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

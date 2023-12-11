@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="success" [routerLink]="['/login']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Private</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="encabezado">
+    <h1>Datos del Usuario</h1>
+    <h2></h2>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nombre: {{ usuario.nombreCompleto }}</ion-card-title>
+      <ion-card-subtitle>ID #{{ usuario.id }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div>Rol: {{ usuario.role }}</div>
+      <div>Email: {{ usuario.email }}</div>
+      <div>Password: {{ usuario.password }}</div>
+    </ion-card-content>
+  </ion-card>
+  

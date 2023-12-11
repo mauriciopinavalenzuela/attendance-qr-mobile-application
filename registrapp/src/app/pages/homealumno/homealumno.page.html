@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Home Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="encabezado">
+    <h1>Bienvenido {{usuario}} </h1>
+  </div>
+
+  <ion-content class="ion-padding" style="display: flex; flex-direction: column;">
+    <ion-card class="alumno-card">
+      <img src="assets/QR.jpg"/>
+      <ion-card-header class="alumno-card-header">
+        <ion-card-title class="alumno-card-title" >ESCANEAR QR </ion-card-title>
+        <ion-card-subtitle class="alumno-card-subtitle">2023_2</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="alumno-card-content" routerLink="/escanear-qr" >
+        Haz click aquí
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="alumno-card">
+      <img src="assets/Asistencia.jpg"/>
+      <ion-card-header class="alumno-card-header">
+        <ion-card-title class="alumno-card-title">ASISTENCIA</ion-card-title>
+        <ion-card-subtitle class="alumno-card-subtitle">2023_2</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="alumno-card-content">
+        Haz click aquí
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="alumno-card">
+      <img src="assets/Mensajes.jpg"/>
+      <ion-card-header class="alumno-card-header">
+        <ion-card-title class="alumno-card-title">MENSAJES</ion-card-title>
+        <ion-card-subtitle class="alumno-card-subtitle">2023_2</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="alumno-card-content">
+        Haz click aquí
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="alumno-card">
+      <img src="assets/Cursos.jpg"/>
+      <ion-card-header class="alumno-card-header">
+        <ion-card-title class="alumno-card-title">ASIGNATURAS</ion-card-title>
+        <ion-card-subtitle class="alumno-card-subtitle">2023_2</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="alumno-card-content">
+        Haz click aquí
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>

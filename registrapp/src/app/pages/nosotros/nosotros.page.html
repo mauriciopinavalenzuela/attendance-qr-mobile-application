@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Sobre Nosotros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <swiper-container #swiper (afterinit)="swiperReady()" (slidechange)="swiperSlideChanged($event)" [loop]="true" [pagination]="true">
+    <swiper-slide>
+      <h1>Bienvenido:</h1>
+      <img src="assets/celu-fotor-2023102401037.png">
+      <p>Desliza para conocer la app</p>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="slide-content">
+        <h1 class="centered-heading">¿Quiénes somos?</h1>
+        <p class="centered-text">Somos dos estudiantes de Ingeniería en Informática en Duoc UC, dedicados a crear soluciones informáticas.</p>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="slide-content">
+        <h1 class="centered-heading">¿Para qué sirve la aplicación?</h1>
+        <p class="centered-text">Nuestra aplicación móvil ha sido diseñada con el propósito de facilitar el seguimiento eficiente de la asistencia tanto para docentes como para alumnos de Duoc UC. Su funcionalidad es esencial para agilizar y mejorar el proceso de registro de asistencia en el entorno educativo.</p>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <h1 class="centered-heading">Comienza a utilizar la aplicación</h1>
+      <ion-button routerLink="/login" fill="solid" color="success" shape="round" class="boton-ingresar">
+        Ingresar
+      </ion-button>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>

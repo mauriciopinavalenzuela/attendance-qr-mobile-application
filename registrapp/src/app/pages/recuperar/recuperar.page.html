@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="success" [routerLink]="['/login']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Recuperar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="encabezado">
+    <h1>Recuperar Contraseña</h1>
+    <h2></h2>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="recuperarForm" (ngSubmit)="recuperar($event)">
+        <ion-item lines="full">
+          <ion-label position="floating">Ingrese usuario</ion-label>
+          <ion-input type="text" formControlName="username" required></ion-input>
+        </ion-item>
+
+        <div *ngIf="recuperarForm.get('username')?.invalid && (recuperarForm.get('username')?.dirty || recuperarForm.get('username')?.touched)">
+          <ion-label class="error-message" position="floating" color="danger" *ngIf="recuperarForm.get('username')?.hasError('required')">
+            El usuario es obligatorio
+          </ion-label>
+        </div>
+
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" fill="solid" color="success" shape="round" class="boton-recuperar" [disabled]="!recuperarForm.valid">
+              Validar usuario
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

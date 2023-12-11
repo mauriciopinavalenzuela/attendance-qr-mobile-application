@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="success" [routerLink]="['/listar']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Eliminar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="encabezado">
+    <h1>Eliminar Datos del Usuario</h1>
+    <h2></h2>
+  </div>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>ID #{{usuario.id}}</ion-card-subtitle>
+      <ion-card-title>Realmente desea eliminar a {{usuario.nombreCompleto}}? </ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-button (click)="eliminarUsuario()" color="success" shape="round" fill="solid" class="boton-eliminardatos">
+        Eliminar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

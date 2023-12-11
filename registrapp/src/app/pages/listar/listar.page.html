@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="success" [routerLink]="['/']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let a of usuario; let i=index" [routerLink]="['/detalle', a.id]">
+      <ion-label>{{a['username']}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

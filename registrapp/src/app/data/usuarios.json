@@ -1,0 +1,178 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreCompleto": "Daniel Montero",
+      "email": "d.montero@profesor.duoc.cl",
+      "password": "pico1234",
+      "username": "dmontero",
+      "role": "docente"
+    },
+    {
+      "id": 2,
+      "username": "vpoblete",
+      "password": "clave2",
+      "nombreCompleto": "Viviana Poblete",
+      "email": "v.poblete@profesor.duoc.cl",
+      "asignaturas": [
+        "Programacion Web",
+        "Progrmacion de Aplicaciones Moviles"
+      ],
+      "role": "docente",
+      "isactive": true,
+      "sede": "Valparaíso",
+      "periodoAcademico": "2023A"
+    },
+    {
+      "id": 3,
+      "nombreCompleto": "Felipe Ormazabal",
+      "email": "f.ormazabal@profesor.duoc.cl",
+      "password": "duoc1234",
+      "username": "forma",
+      "role": "Docente"
+    },
+    {
+      "id": 4,
+      "nombreCompleto": "Mauricio Pïña",
+      "email": "m.pina@duoc.cl",
+      "password": "hola123",
+      "username": "mpina",
+      "role": "alumno"
+    },
+    {
+      "id": 5,
+      "nombreCompleto": "Cristian Zudohna",
+      "email": "c.zudohna@duoc.cl",
+      "password": "clave5",
+      "username": "czudohna"
+    },
+    {
+      "id": 6,
+      "nombreCompleto": "Valentino Hernandez",
+      "email": "vhernandez@duoc.cl",
+      "password": "pico1234",
+      "username": "vhernan",
+      "role": "Alumno"
+    },
+    {
+      "id": 8,
+      "nombreCompleto": "Christian Lazcano",
+      "email": "chlazcano@profesor.duoc.cl",
+      "password": "duoc1234",
+      "username": "lazcano",
+      "role": "docente"
+    },
+    {
+      "id": 9,
+      "nombreCompleto": "Francisco Valdivieso",
+      "email": "f.valdivieso@.duoc.cl",
+      "password": "duoc123",
+      "username": "valdisex",
+      "role": "docente"
+    },
+    {
+      "nombreCompleto": "Julian Corvalan",
+      "username": "kulian",
+      "email": "julian.baeza@profesor.duoc.cl",
+      "role": "docente",
+      "password": "clve13",
+      "sede": "melipilla",
+      "asignatura1": "Business Intelligence",
+      "asignatura2": "Doctrina Social de la Ignacio",
+      "periodoAcademico": "2023B",
+      "id": 10
+    },
+    {
+      "nombreCompleto": "Kevin Gaete",
+      "username": "kgaete",
+      "email": "kgaete@aiep.cl",
+      "role": "docente",
+      "password": "hola12345",
+      "sede": "Alameda",
+      "asignatura1": "Ingenieria de Software",
+      "asignatura2": "Habilidades de la comunicación escrita",
+      "periodoAcademico": "2023_1",
+      "id": 12
+    },
+    {
+      "nombreCompleto": "Francisco Valdivieso",
+      "username": "fvaldivia",
+      "email": "fvaldivia@duocuc.cl",
+      "role": "docente",
+      "password": "docente1234",
+      "sede": "Peñalolen",
+      "asignatura1": "Artes Marciales",
+      "asignatura2": "Habilidades escritas ",
+      "periodoAcademico": "2023_2",
+      "id": 13
+    },
+    {
+      "nombreCompleto": "Nilo Lazo",
+      "username": "nlazo",
+      "email": "nlazo@duocuc.cl",
+      "role": "alumno",
+      "password": "alumno123",
+      "sede": "Alameda",
+      "asignatura1": "Deep Learning",
+      "asignatura2": "Doctrina social de la iglesia",
+      "periodoAcademico": "2023_2",
+      "id": 14
+    },
+    {
+      "nombreCompleto": "Fernanda Gaete",
+      "username": "fgaete",
+      "email": "fgaete@duocuc.cl",
+      "role": "alumna",
+      "password": "alumna12345",
+      "sede": "Quillota",
+      "asignatura1": "Java",
+      "asignatura2": "Web",
+      "periodoAcademico": "2024_1",
+      "id": 15
+    },
+    {
+      "id": 16,
+      "nombreCompleto": "Joaco Catalan",
+      "email": "jcatalan@duocuc.cl",
+      "password": "joaquin123",
+      "username": "jcatalan",
+      "role": "Alumno"
+    },
+    {
+      "nombreCompleto": "Paula Riquelme",
+      "username": "priquelme",
+      "email": "priquelme@duocuc.cl",
+      "role": "alumna",
+      "password": "alumna1234",
+      "sede": "Peñalolen",
+      "asignatura1": "Deep Learning",
+      "asignatura2": "Programación Web",
+      "periodoAcademico": "2025_1",
+      "id": 17
+    },
+    {
+      "nombreCompleto": "Francisca",
+      "username": "Valdivieso",
+      "email": "pancha@profesor.duoc.cl",
+      "role": "docente",
+      "password": "chupapico3",
+      "sede": "Maipu",
+      "asignatura1": "BPM",
+      "asignatura2": "Gestion de Calidad",
+      "periodoAcademico": "20022",
+      "id": 18
+    },
+    {
+      "nombreCompleto": "Aldo Martinez",
+      "username": "datadriven",
+      "email": "a.martinez@profesor.duoc.cl",
+      "role": "docente",
+      "password": "clave321",
+      "sede": "maipu",
+      "asignatura1": "Inteligencia de Negocios",
+      "asignatura2": "Big Data",
+      "periodoAcademico": "20223",
+      "id": 19
+    }
+  ]
+}

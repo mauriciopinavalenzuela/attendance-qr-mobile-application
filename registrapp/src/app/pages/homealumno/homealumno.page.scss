@@ -1,0 +1,51 @@
+
+.encabezado {
+    
+  margin-top: 20px;
+  margin-left: 10px;
+
+  h1 {
+      font-size: 1.6rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bolder;
+  }
+
+}
+
+ion-card {
+  
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border-radius: 10px; /* Agrega bordes redondos */
+  overflow: hidden; 
+}
+
+ion-card:hover {
+  transform: translateY(-10px);
+}
+
+ion-content {
+  overflow-y: hidden;
+}
+
+.alumno-card-title {
+  font-size: 0.9rem;
+  font-weight: bold; 
+  color: #333; 
+}
+
+.alumno-card-subtitle {
+  font-size: 0.8rem; 
+  color: #666; 
+}
+
+.alumno-card-header {
+  background-color: #f0f0f0; 
+}
+
+.alumno-card-content {
+  font-size: 0.8rem; 
+  color: #444; 
+}
+

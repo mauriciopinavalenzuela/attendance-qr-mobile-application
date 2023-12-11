@@ -1,0 +1,171 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="success" [routerLink]="['/login']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crear Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-content-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Crear Cuenta</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form [formGroup]="formularioRegistro" (keydown.enter)="crearCuenta($event)">
+          <ion-item>
+            <ion-label position="floating">Nombre Completo</ion-label>
+            <ion-input type="text" formControlName="nombreCompleto"></ion-input>
+          </ion-item>
+          
+          <div *ngIf="formularioRegistro.get('nombreCompleto')?.invalid && (formularioRegistro.get('nombreCompleto')?.dirty || formularioRegistro.get('nombreCompleto')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('nombreCompleto')?.hasError('required')">
+              Es requerido
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('nombreCompleto')?.hasError('minlength')">
+              El nombre debe tener mínimo 5 caracteres
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('nombreCompleto')?.hasError('maxlength')">
+              El nombre debe tener máximo 30 caracteres
+            </ion-label>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="text" formControlName="username"></ion-input>
+          </ion-item>
+          
+          <div *ngIf="formularioRegistro.get('username')?.invalid && (formularioRegistro.get('username')?.dirty || formularioRegistro.get('username')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('username')?.hasError('required')">
+              Es requerido
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('username')?.hasError('minlength')">
+              El usuario debe tener mínimo 5 caracteres
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('username')?.hasError('maxlength')">
+              El usuario debe tener máximo 10 caracteres
+            </ion-label>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <div *ngIf="formularioRegistro.get('email')?.invalid && (formularioRegistro.get('email')?.dirty || formularioRegistro.get('email')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('email')?.hasError('required')">
+              Es requerido
+            </ion-label>
+          </div>
+
+          
+          <ion-item>
+            <ion-label position="floating">Rol</ion-label>
+            <ion-select formControlName="role">
+              <ion-select-option value="alumno">Alumno</ion-select-option>
+              <ion-select-option value="docente">Docente</ion-select-option>
+            </ion-select>
+          </ion-item>
+          
+          <div *ngIf="formularioRegistro.get('role')?.invalid && (formularioRegistro.get('role')?.dirty || formularioRegistro.get('role')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('role')?.hasError('required')">
+              Es requerido
+            </ion-label>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+          <div *ngIf="formularioRegistro.get('password')?.invalid && (formularioRegistro.get('password')?.dirty || formularioRegistro.get('password')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('password')?.hasError('required')">
+              Es requerido
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('password')?.hasError('minlength')">
+              La contraseña debe tener mínimo 5 caracteres
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('password')?.hasError('maxlength')">
+              La contraseña debe tener máximo 12 caracteres
+            </ion-label>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Sede</ion-label>
+            <ion-select formControlName="sede">
+              <ion-select-option value="alameda">Alameda</ion-select-option>
+              <ion-select-option value="antonio-varas">Antonio Varas</ion-select-option>
+              <ion-select-option value="maipu">Maipú</ion-select-option>
+              <ion-select-option value="melipilla">Melipilla</ion-select-option>
+              <ion-select-option value="alonso-de-ovalle">Padre Alonso de Ovalle</ion-select-option>
+              <ion-select-option value="plaza-norte">Plaza Norte</ion-select-option>
+              <ion-select-option value="plaza-oeste">Plaza Oeste</ion-select-option>
+              <ion-select-option value="plaza-vespucio">Plaza Vespucio</ion-select-option>
+              <ion-select-option value="puente-alto">Puente Alto</ion-select-option>
+              <ion-select-option value="san-bernardo">San Bernardo</ion-select-option>
+              <ion-select-option value="san-bernardo">San Carlos de Apoquindo</ion-select-option>
+              <ion-select-option value="san-berardo">San Joaquin</ion-select-option>
+            </ion-select>
+          </ion-item>
+          
+          <div *ngIf="formularioRegistro.get('sede')?.invalid && (formularioRegistro.get('sede')?.dirty || formularioRegistro.get('sede')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('role')?.hasError('required')">
+              Es requerido
+            </ion-label>
+          </div>
+          
+          <ion-item>
+            <ion-label position="floating">Asignatura 1</ion-label>
+            <ion-input type="text" formControlName="asignatura1"></ion-input>
+          </ion-item>
+
+          <div *ngIf="formularioRegistro.get('asignatura1')?.invalid && (formularioRegistro.get('asignatura1')?.dirty || formularioRegistro.get('asignatura1')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('asignatura1')?.hasError('required')">
+              Es requerido
+            </ion-label>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Asignatura 2</ion-label>
+            <ion-input type="text" formControlName="asignatura2"></ion-input>
+          </ion-item>
+          
+          <div *ngIf="formularioRegistro.get('asignatura2')?.invalid && (formularioRegistro.get('asignatura2')?.dirty || formularioRegistro.get('asignatura2')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('asignatura2')?.hasError('required')">
+              Es requerido
+            </ion-label>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Período Académico</ion-label>
+            <ion-input type="text" formControlName="periodoAcademico"></ion-input>
+          </ion-item>
+
+          <div *ngIf="formularioRegistro.get('periodoAcademico')?.invalid && (formularioRegistro.get('periodoAcademico')?.dirty || formularioRegistro.get('periodoAcademico')?.touched)">
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('periodoAcademico')?.hasError('required')">
+              Es requerido
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('periodoAcademico')?.hasError('minlength')">
+              El período académico debe tener mínimo 5 caracteres
+            </ion-label>
+            <ion-label class="error-message" position="floating" color="danger" *ngIf="formularioRegistro.get('periodoAcademico')?.hasError('maxlength')">
+              El período académico debe tener máximo 6 caracteres
+            </ion-label>
+          </div>
+
+          <ion-button routerLink="/" type="submit" fill="solid" color="success" shape="round" class="boton-crearcuenta" [disabled]="!formularioRegistro.valid" (click)="crearCuenta($event)">
+            Crear Cuenta
+          </ion-button>
+          <ion-label routerLink="/login" color="success" class="enlace-login">
+            Login
+          </ion-label>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

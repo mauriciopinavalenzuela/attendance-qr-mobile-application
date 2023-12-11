@@ -1,0 +1,56 @@
+ion-card-header {
+  text-align: center; 
+}
+
+ion-content {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ion-button.boton-crearcuenta {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 11px; 
+  padding: 5px 9px; 
+  width: auto; 
+}
+
+ion-label.enlace-login {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-label.restablecer-contrasena {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; 
+}
+
+ion-avatar.grande {
+  width: 170px; 
+  height: 170px; 
+}
+
+
+ion-item .ion-label {
+  font-size: 14px; 
+}
+
+.error-message {
+  font-size: 13px; 
+  margin-top: 8px; 
+}

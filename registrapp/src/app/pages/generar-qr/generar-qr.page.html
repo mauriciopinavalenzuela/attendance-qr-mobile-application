@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Generar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="ion-text-center">
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Seleccionar Asignatura:</ion-label>
+        <ion-select [(ngModel)]="datos.asignatura" required>
+          <ion-select-option *ngIf="asignaturas.asignatura1" [value]="asignaturas.asignatura1">{{ asignaturas.asignatura1 }}</ion-select-option>
+          <ion-select-option *ngIf="asignaturas.asignatura2" [value]="asignaturas.asignatura2">{{ asignaturas.asignatura2 }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button (click)="generarQr()" expand="block" size="small">
+        Generar/Actualizar <br> Código QR
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <qrcode mode="ios" [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    <ion-button (click)="verQr()" expand="block" size="small">
+      Ver Datos Código QR
+    </ion-button>
+  </ion-card>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap">Datos: {{scannedResult}} </ion-label>
+  </ion-item>
+
+</ion-content>
