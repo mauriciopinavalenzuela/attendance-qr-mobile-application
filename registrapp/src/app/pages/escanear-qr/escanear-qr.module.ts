@@ -8,15 +8,14 @@ import { EscanearQrPageRoutingModule } from './escanear-qr-routing.module';
 
 import { EscanearQrPage } from './escanear-qr.page';
 
-import { NgxScannerQrcodeModule, LOAD_WASM } from 'ngx-scanner-qrcode';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EscanearQrPageRoutingModule,
-    NgxScannerQrcodeModule
+    EscanearQrPageRoutingModule
   ],
   declarations: [EscanearQrPage]
 })
