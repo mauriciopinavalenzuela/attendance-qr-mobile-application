@@ -6,9 +6,6 @@
 </ion-header>
 
 <ion-content>
-  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button (click)="scan()" [disabled]="!isSupported">
-      <ion-icon name="scan"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <ion-button (click)="scan()"> Escanear QR </ion-button>
+  {{code}}
 </ion-content>
